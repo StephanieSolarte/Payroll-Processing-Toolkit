@@ -17,7 +17,7 @@ let employees = [
     {
         name: "luke",
         hourlyRate: 20,
-        hoursWorked: 15
+        hoursWorked: 45
     },
 ];
 
@@ -35,7 +35,7 @@ const calculateTaxes = (grossPay) => {
 };
     
 function processPayroll(employees){
-    const basePay = calculateBasePay(employees.hourlyRate, employees.hoursWord);
+    const basePay = calculateBasePay(employees.hourlyRate, employees.hoursWorked);
     const overtimePay = calculateOvertimePay(employees.hourlyRate,employees.hoursWorked);
     const grossPay = basePay + overtimePay;
     const taxes = calculateTaxes(grossPay);
@@ -57,3 +57,4 @@ employees.forEach(emp => {
 });
 
 
+ 
